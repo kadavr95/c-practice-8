@@ -20,11 +20,11 @@ int main(void)
 
 int input(long double *a,long double *b)
 {
-  long double aa,bb;
-  char oper="";
+  long double aa,bb,cc;
+  char oper;
   printf("Taskset 8. Yaskovich Dmitry T01-01c\n");
   printf("Enter expression you want to calculate\n");
-  scanf("%ld %d", &aa, &bb);
+  scanf("%ld %c %ld %ld", &aa, &oper, &bb, &cc);
   *a=aa;
   *b=bb;
 }
