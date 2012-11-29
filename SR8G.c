@@ -1,12 +1,41 @@
 #include <stdio.h>
 
-long int decimaltobase(
+int input(long double *a,long double *b);
+int idb(long int number,int base,long int *result);
+int fdb(long double number,int base,long double *result);
+int ibd(long int number,int base,long int *result);
+int fbd(long double number,int base,long double *result);
+int output(long double c);
 
+int main(void)
+{
+  long double a,b,c;
+  int check=1;
+  while (1)
+  {
+  input(&a,&b);
+  output(c);
+  }
+}
 
+int input(long double *a,long double *b)
+{
+  long double aa,bb;
+  char oper="";
+  printf("Taskset 8. Yaskovich Dmitry T01-01c\n");
+  printf("Enter expression you want to calculate\n");
+  scanf("%ld %d", &aa, &bb);
+  *a=aa;
+  *b=bb;
+}
 
-
-
-
+int output(long double c)
+{
+  printf("Result: %ld\n",c);
+  printf("Dimini Inc.\n");
+  printf("For progressive future\n");
+  printf("(c)2009-2012\n");
+}
 
 
 
@@ -22,8 +51,8 @@ long int decimaltobase(
     int main(void) {
      long int x, y, a=0;
      int ch=0;
-     printf("Enter number and base of it(5 or 10): ");
-     scanf("%ld %d", &x, &ch);
+	 printf("Enter number and base of it(5 or 10): ");
+	 scanf("%ld %d", &x, &ch);
      if (ch==10)
      {
        y = toBASE(x, &a);
@@ -35,7 +64,7 @@ long int decimaltobase(
      else
      {
        y=BASEto10(x);
-       printf("%ld base 5 to base 10: a=%ld\n",x, y);
+	   printf("%ld base 5 to base 10: a=%ld\n",x, y);
      }
      fflush(stdin);
      getchar();
