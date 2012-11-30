@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int input(long double *a,long double *b);
+int input(long double *a,long double *b,long double *c);
 int idb(long int number,int base,long int *result);
 int fdb(long double number,int base,long double *result);
 int ibd(long int number,int base,long int *result);
@@ -9,29 +9,34 @@ int output(long double c);
 
 int main(void)
 {
-  long double a,b,c;
+  long double a,b,c,z;
   int check=1;
   while (1)
   {
-  input(&a,&b);
-  output(c);
+  input(&a,&b,&c);
+  output(a);
   }
 }
 
-int input(long double *a,long double *b)
+int input(long double *a,long double *b, long double *c)
 {
   long double aa,bb,cc;
-  char oper;
+  char oper,t1,t2;
   printf("Taskset 8. Yaskovich Dmitry T01-01c\n");
   printf("Enter expression you want to calculate\n");
-  scanf("%ld %c %ld %ld", &aa, &oper, &bb, &cc);
+  scanf("%llf%s %llf", &aa, &oper, &bb);
+  if (oper=='b')
+  {
+  scanf("%s %s %llf", &t1, &t2, &cc);
+  }
   *a=aa;
   *b=bb;
+  *c=cc;
 }
 
 int output(long double c)
 {
-  printf("Result: %ld\n",c);
+  printf("Result: %.18llf\n",c);
   printf("Dimini Inc.\n");
   printf("For progressive future\n");
   printf("(c)2009-2012\n");
@@ -42,7 +47,7 @@ int output(long double c)
 
 /*
 	#include <stdio.h>
-    #include <limits.h>
+	#include <limits.h>
     #define BASE 5
 
     long int BASEto10(long int a);
