@@ -59,8 +59,7 @@ int main(void) {
 long int BASEto10(long int a) {
  int k=1;
  long int a10=0;
- while (a)
- {
+ while (a) {
   a10 += k*(a%10);
   k *= BASE;
   a /= 10;
