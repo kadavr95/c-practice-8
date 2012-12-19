@@ -2,10 +2,12 @@
 #include <limits.h>
 #include <math.h>
 #define BASE 5
+#define LIMIT 2144444444
 
-long int BASEto10(long int a);
-long int toBASE(long int a10,long int *z);
+//long int BASEto10(long int a);
+//long int toBASE(long int a10,long int *z);
 long int sum(long int x,long int y,long int *z);
+long int subtract(long int x,long int y,long int *z);
 long int multiply(long int x,long int y,long int *z);
 long int power(long int x,long int y,long int *z);
 
@@ -21,8 +23,8 @@ int main(void) {
  }
  if (op=='-')
  {
-   y*=-1;
-   ch=sum(x,y,&z);
+   //y*=-1;
+   ch=subtract(x,y,&z);
  }
  if (op=='*')
  {
@@ -109,6 +111,10 @@ long int w,v;
   t2=toBASE(w,&v);
   *z=v;
   return t1*t2;
+}
+long int subtract(long int x,long int y,long int *z)
+{
+
 }
 long int multiply(long int x,long int y,long int *z)
 {
