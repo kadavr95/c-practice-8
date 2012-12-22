@@ -167,7 +167,7 @@ long int subtract(long int x,long int y,long int *z)//вычитание
 long int multiply(long int x,long int y,long int *z)//умножение
 {
  int t1=1,t2=1,xs=1,ys=1;//определение переменных
- long int ztmp=*z,zres=*z,yrs=y;
+ long int ztmp=*z,zres=*z,yrs=abs(y);
  if (x<0)//сохраняем знаки переменных
   xs=-1;
  if (y<0)
